@@ -6,6 +6,8 @@
  * @Last Modified time: 2022-01-01 18:36:24
  */
 
+use App\Http\Controllers\joinController;
+use App\Http\Controllers\mergeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\selectController;
 use App\Http\Controllers\RetriveController;
@@ -41,4 +43,10 @@ use App\Http\Controllers\agregateController;
 
 // Route::get('/',[selectController::class,'uniqueSelect']);
 // Route::get('/',[selectController::class,'singleColumnSelect']);
-Route::get('/',[selectController::class,'multiColumnSelect']);
+//Route::get('/',[selectController::class,'multiColumnSelect']);
+
+//merge
+//Route::get('/',[mergeController::class,'mergeData']);
+
+//join
+Route::get('/',[joinController::class,'leftJoinData']);
