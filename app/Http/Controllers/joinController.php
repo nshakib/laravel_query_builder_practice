@@ -17,6 +17,9 @@ class joinController extends Controller
 
     function rightJoinData()
     {
-
+        $result = DB::table('students')//mother arble
+        ->rightJoin('exam_marks','students.roll', '=','exam_marks.roll')
+            ->get();
+        return $result;
     }
 }

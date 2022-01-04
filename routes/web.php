@@ -6,8 +6,11 @@
  * @Last Modified time: 2022-01-01 18:36:24
  */
 
+use App\Http\Controllers\deleteController;
+use App\Http\Controllers\insertController;
 use App\Http\Controllers\joinController;
 use App\Http\Controllers\mergeController;
+use App\Http\Controllers\updateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\selectController;
 use App\Http\Controllers\RetriveController;
@@ -49,4 +52,15 @@ use App\Http\Controllers\agregateController;
 //Route::get('/',[mergeController::class,'mergeData']);
 
 //join
-Route::get('/',[joinController::class,'leftJoinData']);
+//Route::get('/',[joinController::class,'leftJoinData']);
+Route::get('/',[joinController::class,'rightJoinData']);
+
+//insert
+Route::get('/insert',[insertController::class,'insertRow']);
+
+//delete
+
+Route::get('/delete',[deleteController::class,'onDelete']);
+
+//update
+Route::get('/update',[updateController::class,'onUpdate']);
